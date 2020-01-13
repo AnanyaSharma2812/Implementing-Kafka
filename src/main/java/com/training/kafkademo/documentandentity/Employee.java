@@ -1,5 +1,5 @@
 package com.training.kafkademo.documentandentity;
- import  java.util.Date;
+import  java.util.Date;
 public class Employee
 {
     private String firstName;

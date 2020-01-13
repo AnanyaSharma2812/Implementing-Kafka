@@ -6,8 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "EMPLOYEE")
-public class EmployeeEntity
-{
+public class EmployeeEntity {
     String firstName ;
     String lastName ;
 
