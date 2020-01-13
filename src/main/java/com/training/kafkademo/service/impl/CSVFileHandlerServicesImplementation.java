@@ -1,6 +1,5 @@
 package com.training.kafkademo.service.impl;
 
-import com.training.kafkademo.documentandentity.Employee;
 import com.training.kafkademo.service.MyFileHandlerServices;
 import org.springframework.stereotype.Service;
 
