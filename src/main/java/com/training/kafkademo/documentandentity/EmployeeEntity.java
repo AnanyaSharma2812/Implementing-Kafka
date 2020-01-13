@@ -6,6 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "EMPLOYEE")
+
 public class EmployeeEntity
 {
     String firstName ;

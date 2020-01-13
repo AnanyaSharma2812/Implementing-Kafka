@@ -5,8 +5,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 @Document
+
 public class EmployeeDocument
 {
+
     String firstName ;
     String lastName ;
 
