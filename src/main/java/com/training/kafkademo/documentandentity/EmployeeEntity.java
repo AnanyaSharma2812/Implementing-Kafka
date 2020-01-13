@@ -1,5 +1,5 @@
-package com.training.kafkademo.documentandentity;
 
+        package com.training.kafkademo.documentandentity;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
