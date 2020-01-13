@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 @Document
-public class EmployeeDocument implements Employee
+public class EmployeeDocument
 {
     String firstName ;
     String lastName ;
@@ -17,7 +17,7 @@ public class EmployeeDocument implements Employee
     public EmployeeDocument()
     { }
 
-    @Override
+
     public String toString() {
         return "EmployeeDocument{" +
                 "firstName='" + firstName + '\'' +
