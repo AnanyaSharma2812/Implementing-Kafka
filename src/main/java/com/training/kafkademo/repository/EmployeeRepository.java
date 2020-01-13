@@ -1,4 +1,7 @@
 package com.training.kafkademo.repository;
 
-public interface EmployeeRepository {
+import com.training.kafkademo.documentandentity.Employee;
+import org.springframework.data.repository.CrudRepository;
+
+public interface EmployeeRepository extends CrudRepository<Employee,Long> {
 }
