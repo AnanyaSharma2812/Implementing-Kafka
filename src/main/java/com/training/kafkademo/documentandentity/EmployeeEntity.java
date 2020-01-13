@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "EMPLOYEE")
-public class EmployeeEntity implements Employee
+public class EmployeeEntity
 {
     String firstName ;
     String lastName ;
