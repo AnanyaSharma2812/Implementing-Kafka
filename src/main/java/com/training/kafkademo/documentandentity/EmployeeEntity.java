@@ -6,12 +6,9 @@ import java.util.Date;
 
 @Entity
 @Table(name = "EMPLOYEE")
-<<<<<<< HEAD
+
 public class EmployeeEntity
 {
-=======
-public class EmployeeEntity {
->>>>>>> 50e90c51751e111e19da01e3d9bff3ff303472a8
     String firstName ;
     String lastName ;
 

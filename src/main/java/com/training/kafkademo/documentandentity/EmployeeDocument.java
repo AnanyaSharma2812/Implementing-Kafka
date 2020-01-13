@@ -5,12 +5,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.Date;
 
 @Document
-<<<<<<< HEAD
 public class EmployeeDocument
 {
-=======
-public class EmployeeDocument {
->>>>>>> 50e90c51751e111e19da01e3d9bff3ff303472a8
     String firstName ;
     String lastName ;
 
