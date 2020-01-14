@@ -3,6 +3,7 @@ package com.training.kafkademo.service.impl;
 import com.training.kafkademo.documentandentity.Employee;
 import com.training.kafkademo.service.MyFileHandlerServices;
 import net.minidev.json.JSONObject;
+import org.json.simple.JSONArray;
 import org.springframework.stereotype.Service;
 
 import java.io.FileReader;
@@ -11,7 +12,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 
-@Service
+
 public class JSONFileHandlerServicesImplementation implements MyFileHandlerServices
 {
     Employee[] employee=new Employee[100];

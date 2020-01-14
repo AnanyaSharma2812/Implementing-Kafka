@@ -4,6 +4,8 @@ import com.training.kafkademo.service.MyFileHandlerServices;
 import com.training.kafkademo.service.impl.CSVFileHandlerServicesImplementation;
 import com.training.kafkademo.service.impl.JSONFileHandlerServicesImplementation;
 import com.training.kafkademo.service.impl.XMLFileHandlerServicesImplementation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,8 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/EmployeeController")
 public class EmployeeController
 {
+    @Autowired
 
-
+    @GetMapping("/start")
     public int startThreads()
     {
         MyFileHandlerServices XMLObject1 = new XMLFileHandlerServicesImplementation();
@@ -34,11 +37,11 @@ public class EmployeeController
             e.printStackTrace();
         }
 
-        MyFileHandler XMLObject2 = new XMLFileHandler();
+        MyFileHandlerServices XMLObject2 = new XMLFileHandlerServicesImplementation();
         WriterThread thread4 = new WriterThread(XMLObject2);
-        MyFileHandler CSVObject2 = new CSVFileHandler();
+        MyFileHandlerServices CSVObject2 = new CSVFileHandlerServicesImplementation();
         WriterThread thread5 = new WriterThread(CSVObject2);
-        MyFileHandler JSONObject2 = new JSONFileHandler();
+        MyFileHandlerServices JSONObject2 = new JSONFileHandlerServicesImplementation();
         WriterThread thread6 = new WriterThread(JSONObject2);
 
         thread4.start();
