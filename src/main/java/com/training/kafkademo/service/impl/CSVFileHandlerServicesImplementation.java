@@ -2,6 +2,8 @@ package com.training.kafkademo.service.impl;
 
 import com.training.kafkademo.documentandentity.Employee;
 import com.training.kafkademo.service.MyFileHandlerServices;
+import com.training.kafkademo.service.Producer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.FileNotFoundException;
@@ -15,6 +17,7 @@ import java.text.SimpleDateFormat;
 @Service
 public class CSVFileHandlerServicesImplementation implements MyFileHandlerServices
 {
+    Producer producer;
     RandomAccessFile readFile;
     static int counter=0;
 
@@ -64,15 +67,7 @@ public class CSVFileHandlerServicesImplementation implements MyFileHandlerServic
     @Override
     public void write(Employee emp) {
 
-        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yy");
-        String DateOfBirth = dateFormat.format(emp.getDateOfBirth());
-
-
-
-//        Document record=new Document().append("first_name",emp.getFirstName()).append("last_name",emp.getLastName()).append("dateOfBirth",emp.getDateOfBirth())
-//                .append("experience",emp.getExperience());
-//        collection.insertOne(record);
-
+        producer.sendMessage(emp);
 
     }
 }

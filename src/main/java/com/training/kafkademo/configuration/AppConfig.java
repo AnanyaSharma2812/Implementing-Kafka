@@ -14,7 +14,7 @@ import java.util.Map;
 @Configuration
 @ComponentScan(basePackages="com.mkyong.thread")
 public class AppConfig{
-    @Value(value = "${kafka.bootstrapAddress}")
+    @Value(value = "${spring.kafka.consumer.bootstrap-servers}")
     private String bootstrapAddress;
     @Bean
     public KafkaAdmin kafkaAdmin() {

@@ -7,8 +7,8 @@ import com.training.kafkademo.service.MyFileHandlerServices;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
-@Scope(value="prototype")
+//@Component
+//@Scope(value="prototype")
 public class ReaderThread extends Thread
 {
     private MyFileHandlerServices myFileHandlerReference;
