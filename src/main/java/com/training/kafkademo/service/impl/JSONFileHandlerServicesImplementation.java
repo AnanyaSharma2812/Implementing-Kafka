@@ -2,10 +2,7 @@ package com.training.kafkademo.service.impl;
 
 import com.training.kafkademo.documentandentity.Employee;
 import com.training.kafkademo.service.MyFileHandlerServices;
-import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 
 import java.io.FileReader;
@@ -19,14 +16,15 @@ public class JSONFileHandlerServicesImplementation implements MyFileHandlerServi
 {
     Employee[] employee=new Employee[100];
     int employeeCounter;
-    JSONFileHandlerServicesImplementation(){
+    JSONFileHandlerServicesImplementation()
+    {
             employeeCounter=0;
             JSONObject tempEmployee;
             int count=0;
             String fileName="/Users/parameshwarip/Downloads/employee.json";
             try (FileReader reader = new FileReader(fileName))
             {
-                JSONArray jo =(JSONArray) new JSONParser().parse(reader);
+                JSONArray jo =(JSONArray) new org.json.simple.parser.JSONParser().parse(reader);
                 DateFormat dateFormat=new SimpleDateFormat("MM/dd/yy");
                 for (Object emp: jo) {
                     employee[count]=new Employee();
@@ -38,7 +36,7 @@ public class JSONFileHandlerServicesImplementation implements MyFileHandlerServi
                     count++;
                 }
             }
-            catch (IOException | ParseException | java.text.ParseException exception){
+            catch (IOException | org.json.simple.parser.ParseException | java.text.ParseException exception){
                 System.out.println(exception.getMessage());
             }
     }
