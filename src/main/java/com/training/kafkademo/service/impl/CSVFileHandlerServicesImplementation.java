@@ -1,5 +1,6 @@
 package com.training.kafkademo.service.impl;
 
+import com.training.kafkademo.documentandentity.Employee;
 import com.training.kafkademo.service.MyFileHandlerServices;
 import org.springframework.stereotype.Service;
 
@@ -61,7 +62,17 @@ public class CSVFileHandlerServicesImplementation implements MyFileHandlerServic
     }
 
     @Override
-    public void write(Employee e) {
+    public void write(Employee emp) {
+
+        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yy");
+        String DateOfBirth = dateFormat.format(emp.getDateOfBirth());
+
+
+
+//        Document record=new Document().append("first_name",emp.getFirstName()).append("last_name",emp.getLastName()).append("dateOfBirth",emp.getDateOfBirth())
+//                .append("experience",emp.getExperience());
+//        collection.insertOne(record);
+
 
     }
 }
