@@ -8,7 +8,6 @@ import java.util.Date;
 
 public class EmployeeDocument
 {
-
     String firstName ;
     String lastName ;
 

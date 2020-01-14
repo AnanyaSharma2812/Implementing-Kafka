@@ -3,8 +3,11 @@ package com.training.kafkademo.controller;
 import com.training.kafkademo.documentandentity.Employee;
 import com.training.kafkademo.service.MyFileHandlerServices;
 
+
+
 public class WriterThread extends Thread
 {
+
     private MyFileHandlerServices myFileHandlerReference;
     int count;
     //private MyCollection collectionObj;
@@ -31,3 +34,6 @@ public class WriterThread extends Thread
         }
     }
 }
+
+
+

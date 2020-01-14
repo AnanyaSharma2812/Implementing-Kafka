@@ -1,5 +1,4 @@
 package com.training.kafkademo.controller;
-
 import com.training.kafkademo.service.MyFileHandlerServices;
 import com.training.kafkademo.service.impl.CSVFileHandlerServicesImplementation;
 import com.training.kafkademo.service.impl.JSONFileHandlerServicesImplementation;
@@ -29,11 +28,13 @@ public class EmployeeController
         thread1.start();
         thread2.start();
         thread3.start();
-        try {
+        try
+        {
             thread1.join();
             thread2.join();
             thread3.join();
-        } catch (InterruptedException e) {
+        } catch (InterruptedException e)
+        {
             e.printStackTrace();
         }
 
@@ -48,5 +49,4 @@ public class EmployeeController
         thread5.start();
         thread6.start();
     }
-
 }

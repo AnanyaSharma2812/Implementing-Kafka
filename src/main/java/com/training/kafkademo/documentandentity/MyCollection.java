@@ -1,12 +1,6 @@
 package com.training.kafkademo.documentandentity;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.kafka.core.ProducerFactory;
-
-import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
 
 
 //@Configuration
@@ -21,6 +15,19 @@ public class MyCollection
     //private static Object lockObject_add = new Object();
     private static MyCollection instance_add = null;
 
+=======
+import java.util.ArrayList;
+public class MyCollection {
+    List<Employee> list_employee = new ArrayList<Employee>();
+    protected int readCounter = 0;
+    protected int writeCounter = 0;
+
+    private MyCollection() { }
+
+    //private static Object lockObject_add = new Object();
+    private static MyCollection instance_add = null;
+
+>>>>>>> c429f1a8f79141faa0bcce09728233639e9fa8d2
     public static synchronized MyCollection getInstance(){
         if(instance_add == null)
         {
@@ -36,6 +43,7 @@ public class MyCollection
             writeCounter++;
         }
     }
+<<<<<<< HEAD
 
     public synchronized Employee get()
     {
@@ -44,4 +52,12 @@ public class MyCollection
     }
 }
 
+=======
+>>>>>>> c429f1a8f79141faa0bcce09728233639e9fa8d2
 
+    public synchronized Employee get()
+    {
+        Employee get_emp = list_employee.get(readCounter++);
+        return get_emp;
+    }
+}
