@@ -18,7 +18,7 @@ public class JSONFileHandlerServicesImplementation implements MyFileHandlerServi
 {
     Employee[] employee=new Employee[100];
     int employeeCounter;
-    JSONFileHandlerServicesImplementation(){
+    public JSONFileHandlerServicesImplementation(){
             employeeCounter=0;
             JSONObject tempEmployee;
             int count=0;
