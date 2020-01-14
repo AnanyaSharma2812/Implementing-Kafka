@@ -16,7 +16,7 @@ public class EmployeeController
     @Autowired
 
     @GetMapping("/start")
-    public int startThreads()
+    public void startThreads()
     {
         MyFileHandlerServices XMLObject1 = new XMLFileHandlerServicesImplementation();
         ReaderThread thread1 = new ReaderThread(XMLObject1);
