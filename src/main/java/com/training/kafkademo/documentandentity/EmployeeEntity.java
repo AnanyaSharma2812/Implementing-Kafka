@@ -1,18 +1,16 @@
 package com.training.kafkademo.documentandentity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "EMPLOYEE")
-<<<<<<< HEAD
 
 public class EmployeeEntity
 {
-=======
-public class EmployeeEntity {
->>>>>>> 123addedf82675d1014ce8c111af794937604a10
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long employeeId;
     String firstName ;
     String lastName ;
 
