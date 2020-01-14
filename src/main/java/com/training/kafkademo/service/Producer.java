@@ -1,17 +1,23 @@
 package com.training.kafkademo.service;
 
-import com.fasterxml.jackson.databind.ser.std.StringSerializer;
 import com.training.kafkademo.documentandentity.Employee;
-import org.apache.kafka.clients.producer.ProducerConfig;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.kafka.core.DefaultKafkaProducerFactory;
-import org.springframework.kafka.core.ProducerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.logging.Logger;
 
+@Service
 public class Producer {
+    private static final Logger logger = null;
+    private static final String topic="data";
+
+    @Autowired
+    private KafkaTemplate<Object, Employee> kafkaTemplate;
+
+    public void sendMessage(Employee employee){
+        this.kafkaTemplate.send(topic,employee);
+    }
 //    @Value("${spring.kafka.bootstrap-servers}")
 //    private String kafkaServers;
 //

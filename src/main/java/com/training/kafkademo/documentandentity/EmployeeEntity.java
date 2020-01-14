@@ -1,14 +1,18 @@
+package com.training.kafkademo.documentandentity;
 
-        package com.training.kafkademo.documentandentity;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
 @Table(name = "EMPLOYEE")
+<<<<<<< HEAD
 
 public class EmployeeEntity
 {
+=======
+public class EmployeeEntity {
+>>>>>>> 123addedf82675d1014ce8c111af794937604a10
     String firstName ;
     String lastName ;
 
