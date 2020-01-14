@@ -8,12 +8,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-public class PostgresConsumer {
+public class PostgresConsumer
+{
     @Autowired
     EmployeeService employeeService;
 
 
-    void save(EmployeeDTO employeeDTO) {
+    void save(EmployeeDTO employeeDTO)
+    {
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeDTO, employee);
         Employee employeeCreated = employeeService.save(employee);

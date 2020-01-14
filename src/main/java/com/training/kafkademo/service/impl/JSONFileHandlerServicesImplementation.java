@@ -17,7 +17,7 @@ public class JSONFileHandlerServicesImplementation implements MyFileHandlerServi
     int employeeCounter=0;
     JSONObject tempEmployee;
     int count=0;
-    String fileName="/Users/parameshwarip/Downloads/employee.json";
+    String fileName="/Users/ananyasharma/Downloads/employee.json";
     try (FileReader reader = new FileReader(fileName))
 
     {
@@ -34,7 +34,7 @@ public class JSONFileHandlerServicesImplementation implements MyFileHandlerServi
             count++;
         }
     }
-    catch (IOException| org.json.simple.parser.ParseException | java.text.ParseException exception)
+    catch(IOException|org.json.simple.parser.ParseException|java.text.ParseException exception)
     {
         System.out.println(exception.getMessage());
     }
