@@ -1,14 +1,14 @@
+package com.training.kafkademo.documentandentity;
 
-        package com.training.kafkademo.documentandentity;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "EMPLOYEE")
-
-public class EmployeeEntity
-{
+public class EmployeeEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long employeeId;
     String firstName ;
     String lastName ;
 
