@@ -4,6 +4,6 @@ import com.training.kafkademo.documentandentity.Employee;
 
 public interface EmployeeService {
 
-    Employee save(Employee employee);
+    void save(Employee employee);
 
 }
